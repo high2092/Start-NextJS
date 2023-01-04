@@ -33,3 +33,12 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 ### Hydrate
 
 - Pre-rendering을 통해 만들어진 정적 페이지를 React 코드와 매칭시켜 동적인 페이지로 만드는 과정
+
+### Link
+
+- `<a>` 태그를 사용하면 새로고침이 일어나기 때문에, 상태가 초기화될 뿐만 아니라 페이지가 느려짐.
+- ~~Link 요소는 `className`이나 `style`을 가질 수 없다. (필요한 경우 Link 요소 하위 `<a>` 태그에 적용하자)~~ 라고 강의에 나와있지만 NextJS가 버전업되면서 수정된 듯 하다.
+
+### Router
+
+- 현재 URL 정보를 담고 있는 객체 (pathname, query 등)
