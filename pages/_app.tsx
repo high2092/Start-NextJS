@@ -1,19 +1,11 @@
-import NavigationBar from "../components/NavigationBar";
 import "../styles/globals.css";
+import { Layout } from "../components/Layout";
 
 const App = ({ Component, pageProps }: any) => {
   return (
-    <>
-      <NavigationBar />
+    <Layout>
       <Component {...pageProps} />
-      <style jsx global>
-        {`
-          a {
-            color: grey;
-          }
-        `}
-      </style>
-    </>
+    </Layout>
   );
 };
 

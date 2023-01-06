@@ -59,3 +59,11 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 
 - `pages/_app.js` 파일에서 페이지 템플릿을 구성할 수 있다.
 - NextJS에서 css 파일 자체를 불러오는 것은 App Component 내에서만 가능하다. (다른 컴포넌트 파일에서는 CSS Module만 불러올 수 있음)
+
+### Layout Pattern
+
+- JSX 요소를 props로 받는 컴포넌트를 레이아웃으로 활용할 수 있다. 레이아웃을 적용할 컴포넌트를 단순히 레이아웃 컴포넌트로 감싸면 된다.
+
+### Head
+
+- 컴포넌트가 렌더링될 때 해당 컴포넌트에 포함된 Head 컴포넌트 내용이 html의 `<head>`에 포함된다.
