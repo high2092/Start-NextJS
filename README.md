@@ -50,3 +50,12 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 ### Styled JSX
 
 - 컴포넌트 파일 안에 `<style>` 태그를 작성하면 해당 컴포넌트에 한정해서 작성한 스타일이 적용된다.
+
+### Global Styled JSX
+
+- Styled JSX에 global 속성을 추가하면 해당 컴포넌트가 포함된 페이지 내 모든 컴포넌트에 스타일이 적용된다.
+
+### App Component
+
+- `pages/_app.js` 파일에서 페이지 템플릿을 구성할 수 있다.
+- NextJS에서 css 파일 자체를 불러오는 것은 App Component 내에서만 가능하다. (다른 컴포넌트 파일에서는 CSS Module만 불러올 수 있음)
