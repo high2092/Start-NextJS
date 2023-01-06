@@ -42,3 +42,7 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 ### Router
 
 - 현재 URL 정보를 담고 있는 객체 (pathname, query 등)
+
+### CSS Modules
+
+- `.module.css` 확장자를 가진 파일에 class에 대한 style을 정의하고, 컴포넌트에서 해당 파일을 `import`해 className으로 추가함으로써 style을 적용할 수 있다.
