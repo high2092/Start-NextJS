@@ -1,10 +1,13 @@
-import NavigationBar from "../components/NavigationBar";
+import { Seo } from "../components/Seo";
 
 const foo = () => {
   return (
-    <div>
-      <h1>About Us</h1>
-    </div>
+    <>
+      <Seo title="About" />
+      <div>
+        <h1>About Us</h1>
+      </div>
+    </>
   );
 };
 
