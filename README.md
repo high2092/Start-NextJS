@@ -80,3 +80,13 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 
 - 따로 dotenv 라이브러리를 설치하지 않아도 된다.
 - 클라이언트 파일(브라우저)에서는 변수명이 `NEXT_PUBLIC_`으로 시작하는 환경변수만 참조할 수 있다.
+
+### Server Side Props
+
+- 렌더링 이전에 서버 단에서 `getServerSideProps` 함수가 호출되며, 반환될 객체를 컴포넌트에서 props로 전달 받을 수 있다.
+
+  → 데이터 fetch 등을 서버 단에서 미리 수행할 수 있다. (이 경우 데이터가 html에 포함되므로 JavaScript가 비활성화된 브라우저에서도 완성된 페이지를 볼 수 있음)
+
+- `getServerSideProps` 함수는 `pages/` 하위에 있는 파일에 작성해야 한다.
+- `getServerSideProps` 함수를 반드시 `export`해야 동작한다.
+- `getServerSideProps` 함수 내에서 사용할 URL은 절대경로만 가능하다.
