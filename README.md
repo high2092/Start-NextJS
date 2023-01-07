@@ -67,3 +67,16 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 ### Head
 
 - 컴포넌트가 렌더링될 때 해당 컴포넌트에 포함된 Head 컴포넌트 내용이 html의 `<head>`에 포함된다.
+
+### Redirect
+
+- `next.config.js`에 redirects 필드를 추가함으로써 리디렉션을 수행할 수 있다. (외부 링크 가능, URL parameter 가능)
+
+### Rewrite
+
+- `next.config.js`에 rewrites 필드를 추가함으로써 리디렉션 URL을 Next 앱 단에서 마스킹할 수 있다.
+
+### 환경변수
+
+- 따로 dotenv 라이브러리를 설치하지 않아도 된다.
+- 클라이언트 파일(브라우저)에서는 변수명이 `NEXT_PUBLIC_`으로 시작하는 환경변수만 참조할 수 있다.
