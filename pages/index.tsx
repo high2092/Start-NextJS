@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Seo } from "../components/Seo";
 
 const httpGetPopularMovies = async () => {
-  const response = await fetch("/api/movies");
+  const response = await fetch("http://localhost:3000/api/movies");
 
   const { results } = await response.json();
 
@@ -20,8 +20,8 @@ interface Movie {
   original_title: string;
 }
 
-const Home = () => {
-  const [movies, setMovies] = useState<Movie[]>();
+const Home = ({ homePageProps, aboutPageProps }: any) => {
+  const { movies }: { movies: Movie[] } = homePageProps;
 
   useEffect(() => {
     console.log(process.env.NEXT_PUBLIC_API_KEY);
@@ -29,23 +29,31 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    httpGetPopularMovies().then(setMovies);
+    console.log(aboutPageProps); // undefined
   }, []);
 
   return (
     <div>
       <Seo title="Home" />
-      {movies === undefined ? (
-        <h4>Loading... {movies}</h4>
-      ) : (
-        movies.map(({ id, original_title }) => (
-          <div key={id}>
-            <h4>{original_title}</h4>
-          </div>
-        ))
-      )}
+      {movies.map(({ id, original_title }) => (
+        <div key={id}>
+          <h4>{original_title}</h4>
+        </div>
+      ))}
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  const movies = await httpGetPopularMovies();
+
+  return {
+    props: {
+      homePageProps: {
+        movies,
+      },
+    },
+  };
 };
 
 export default Home;

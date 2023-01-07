@@ -1,14 +1,29 @@
+import { useEffect } from "react";
 import { Seo } from "../components/Seo";
 
-const foo = () => {
+const foo = ({ aboutPageProps }: any) => {
+  const { content } = aboutPageProps;
+
+  useEffect(() => {
+    console.log(aboutPageProps);
+  }, []);
+
   return (
     <>
       <Seo title="About" />
-      <div>
-        <h1>About Us</h1>
-      </div>
+      <h1>{content}</h1>
     </>
   );
+};
+
+export const getServerSideProps = async () => {
+  return {
+    props: {
+      aboutPageProps: {
+        content: "About Us",
+      },
+    },
+  };
 };
 
 export default foo;
