@@ -90,3 +90,9 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 - `getServerSideProps` 함수는 `pages/` 하위에 있는 파일에 작성해야 한다.
 - `getServerSideProps` 함수를 반드시 `export`해야 동작한다.
 - `getServerSideProps` 함수 내에서 사용할 URL은 절대경로만 가능하다.
+
+### Routing
+
+- `pages/` 하위에 디렉토리를 구성함으로써 중첩 라우팅이 가능하다.
+- URL Parameter
+  - `pages/[${id}].tsx` → `http://localhost:3000/:id`
