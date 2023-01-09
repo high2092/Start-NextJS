@@ -27,16 +27,7 @@ const Home = ({ homePageProps, aboutPageProps }: any) => {
   const router = useRouter();
 
   const handleMovieClick = (id: string, title: string) => () => {
-    router.push(
-      {
-        pathname: `/movies/${id}`,
-        query: {
-          id,
-          title,
-        },
-      },
-      `/movies/${id}`
-    );
+    router.push(`/movies/${title}/${id}`);
   };
 
   useEffect(() => {
