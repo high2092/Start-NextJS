@@ -96,3 +96,11 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 - `pages/` 하위에 디렉토리를 구성함으로써 중첩 라우팅이 가능하다.
 - URL Parameter
   - `pages/[${id}].tsx` → `http://localhost:3000/:id`
+
+### Navigating
+
+- Link 태그
+- Router.push
+- query 필드를 통해 데이터를 물려줄 수 있다.
+- as 필드를 통해 사용자에게 표시할 URL을 설정할 수 있다.
+- 새로고침이나 URL 직접 입력 등 router 정보가 없는 경우에 대해서는 예외 처리가 필요하다.
