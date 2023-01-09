@@ -112,3 +112,7 @@ Nomad Coders의 `NextJS 시작하기` 강좌를 보며 학습한 내용을 정�
 ### Context
 
 - `getServerSideProps` 함수의 매개변수 `context`를 통해 URL Parameter나 Cookie 등을 참조할 수 있다.
+
+### 404 Pages
+
+- 404 Not Found Error 발생 시 `pages/404.tsx`에 작성된 페이지가 표시된다.
