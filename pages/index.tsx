@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Seo } from "../components/Seo";
 
@@ -23,6 +24,21 @@ interface Movie {
 const Home = ({ homePageProps, aboutPageProps }: any) => {
   const { movies }: { movies: Movie[] } = homePageProps;
 
+  const router = useRouter();
+
+  const handleMovieClick = (id: string, title: string) => () => {
+    router.push(
+      {
+        pathname: `/movies/${id}`,
+        query: {
+          id,
+          title,
+        },
+      },
+      `/movies/${id}`
+    );
+  };
+
   useEffect(() => {
     console.log(process.env.NEXT_PUBLIC_API_KEY);
     console.log(process.env.API_KEY);
@@ -36,7 +52,7 @@ const Home = ({ homePageProps, aboutPageProps }: any) => {
     <div>
       <Seo title="Home" />
       {movies.map(({ id, original_title }) => (
-        <div key={id}>
+        <div key={id} onClick={handleMovieClick(id, original_title)}>
           <h4>{original_title}</h4>
         </div>
       ))}
